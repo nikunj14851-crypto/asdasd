@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Business Assistant</title>
-    <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; text-align: center; }
-        #chat-box { height: 300px; border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
-        input, button { width: 100%; padding: 0.8rem; margin-top: 0.5rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Assistant</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Business Assistant</h2>
-    <div id="chat-box">
-        <p>Welcome! How can I help you today?</p>
+  <div class="assistant-container">
+    <h1>Business Assistant</h1>
+    <div class="chatbox">
+      <div id="chat-display" class="chat-display"></div>
+      <textarea id="user-input" placeholder="Type your message..."></textarea>
+      <button id="send-btn">Send</button>
     </div>
-    <input type="text" id="user-input" placeholder="Ask something...">
-    <button onclick="prank()">Send</button>
-
-    <script>
-        function prank() {
-            const chatBox = document.getElementById('chat-box');
-            chatBox.innerHTML = "<h2 style='color:red;'>Whoops! Token's emptied.</h2>";
-        }
-    </script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
